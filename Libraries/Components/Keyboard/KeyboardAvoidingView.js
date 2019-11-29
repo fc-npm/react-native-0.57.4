@@ -99,9 +99,9 @@ class KeyboardAvoidingView extends React.Component<Props, State> {
 
     if (duration && easing) {
       LayoutAnimation.configureNext({
-        duration: duration,
+        duration: duration > 10 ? duration : 10,
         update: {
-          duration: duration,
+          duration: duration > 10 ? duration : 10,
           type: LayoutAnimation.Types[easing] || 'keyboard',
         },
       });
